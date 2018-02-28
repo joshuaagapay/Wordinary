@@ -1,0 +1,14 @@
+{
+  "name": "wordinary",
+  "version": "1.0.0",
+  "description": "Wordinary Application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Joshua Agapay",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
