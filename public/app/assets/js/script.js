@@ -30,7 +30,7 @@
                     audio.play();
     
                     data.definition.forEach((element) => {
-                        htmlString += `<span class="flow-text"><h6><i>${element.partOfSpeech}<i></h6>${element.definition}.</span></br></br>`;
+                        htmlString += `<span class="flow-text"><h6><i>${element.partOfSpeech}</i></h6>${element.definition}.</span></br></br>`;
                     });
                     let responseText = `
                                         <div class="row">
