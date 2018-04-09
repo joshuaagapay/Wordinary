@@ -7,20 +7,33 @@
             const url = `https://2-dot-diktoapi.appspot.com/api/v1/words/${word}`;
             if(word !== ""){
 
-                const getWords = setInterval(() => {
-                    fetch(url)
+                // const getWords = setInterval(() => {
+                //     fetch(url)
+                //         .then((response) => {
+                //             return response.json();
+                //         })
+                //         .then((data) => {
+                //             displayToHtml(data);
+                //             console.log(data);
+                //         })
+                //         .catch((err) => {
+                //             console.log(err);
+                //         });
+                //         clearInterval(getWords);
+                // }, 1000);
+                fetch(url)
                         .then((response) => {
                             return response.json();
                         })
                         .then((data) => {
-                            displayToHtml(data);
-                            console.log(data);
+                            const delay = setInterval(() => {
+                                displayToHtml(data);
+                                clearInterval(delay);
+                            },200);
                         })
                         .catch((err) => {
                             console.log(err);
                         });
-                        clearInterval(getWords);
-                }, 1000);
             }
     
                 const displayToHtml = (data) => {
