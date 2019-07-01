@@ -14,7 +14,7 @@ $(document).ready(() => {
             }      
         }
 
-        const display = () => {
+        const display = (word) => {
             let responseText='';
             $('.display-word').empty();
 
@@ -46,7 +46,7 @@ $(document).ready(() => {
             .catch(err => console.log(err));
         }
 
-        display();
+        display(word);
         
     });
 });
